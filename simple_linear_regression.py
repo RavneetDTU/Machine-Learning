@@ -36,3 +36,19 @@ regressor.fit(X_train,y_train)
 
 # Predicting the Test Set Results
 y_pred = regressor.predict(X_test)
+
+# Visualising the Training set Results
+plt.scatter(X_train,y_train,color = 'red')
+plt.plot(X_train,regressor.predict(X_train))
+plt.title('Salary vs Experience(Training Set)')
+plt.xlabel('Years Of Experiance')
+plt.ylabel('Salary')
+plt.show()
+
+# Visualising the Test set Results (By Just Adding Test Cases In Previous Graph)
+plt.scatter(X_test,y_test,color = 'green')
+plt.plot(X_train,regressor.predict(X_train))
+plt.title('Salary vs Experience(Training Set)')
+plt.xlabel('Years Of Experiance')
+plt.ylabel('Salary')
+plt.show()
